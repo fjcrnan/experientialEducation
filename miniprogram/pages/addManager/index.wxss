@@ -1,0 +1,104 @@
+page {
+  background-color: #f4f2f5;
+}
+.shadowLayer {
+  height: 20rpx;
+  width: 100%;
+  background: -webkit-linear-gradient(top, #dbdadb, #fff);
+}
+.imgContainer {
+  background-color: #fff;
+  width: 100%;
+}
+.imgContainer .imgDescribe {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  padding-left: 20rpx;
+  border-bottom: 1px solid #f6f7f8;
+  font-size: 29rpx;
+  align-items: center;
+}
+.imgContainer .imgCon {
+  width: 100%;
+  height: 230rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #f6f7f8;
+}
+.classContainer {
+  width: 100%;
+  margin-top: 15rpx;
+  background-color: #fff;
+}
+.classContainer .gradeChoose {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  border-bottom: 1px solid #f6f7f8;
+}
+.classContainer .gradeChoose .gradeDes {
+  flex: 2.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+.classContainer .gradeChoose .gradeSelecter {
+  flex: 3.5;
+  display: flex;
+  align-items: center;
+}
+.classContainer .gradeChoose .gradeSelecter .ChooseSelect {
+  width: 100%;
+  z-index: 9;
+}
+.classContainer .gradeChoose .placeholder {
+  flex: 2.7;
+}
+.classContainer .stateChoose {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  border-bottom: 1px solid #f6f7f8;
+}
+.classContainer .stateChoose .gradeDes {
+  flex: 1.9;
+  display: flex;
+  align-items: center;
+  padding-left: 33rpx;
+  font-size: 28rpx;
+}
+.classContainer .stateChoose .gradeSelecter {
+  flex: 3.5;
+  display: flex;
+  align-items: center;
+}
+.classContainer .stateChoose .gradeSelecter .ChooseSelect {
+  width: 100%;
+  z-index: 9;
+}
+.classContainer .stateChoose .placeholder {
+  flex: 2.7;
+}
+.confirm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.confirm .van_button {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm .buttonclass {
+  width: 75%;
+  height: 75rpx;
+  border-radius: 10rpx;
+}
+.propose {
+  z-index: 99! important;
+}

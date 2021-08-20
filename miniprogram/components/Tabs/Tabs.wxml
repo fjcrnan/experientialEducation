@@ -1,0 +1,22 @@
+<view class="top">
+    <van-icon name="wap-nav" size="45rpx" class="menuIcon" bindtap="eject" />
+</view>
+<van-popup show="{{ show }}" z-index="99" position="left" custom-style="height: 100%;width:550rpx" bind:close="onClose">
+    <view class="sidebar">
+        <van-image class="headPortrait" round width="8rem" height="8rem" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F32%2F77%2F59244336c0198_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617887225&t=2895974e5bdaaf5f7f3a3e367609f712" />
+        <van-cell-group class="information" border="{{ false }}">
+            <van-cell center title="管理员名称：" value="内容" border="{{ false }}" custom-class="class-custom" value-class="class-value" title-class="class-title" />
+            <van-cell center title="管理员权限等级：" value="内容" border="{{ false }}" custom-class="class-custom" value-class="class-value" title-class="class-title" />
+            <van-cell center title="管理员个人介绍：" value="内容" border="{{ false }}" custom-class="class-custom" value-class="class-value" title-class="class-title" />
+        </van-cell-group>
+        <van-cell-group class="navigator">
+            <van-cell icon="column" is-link title="课程管理" link-type="navigateTo" url="/pages/curriculumManage/index" title-class="class-title"/>
+            <van-cell icon="bill" is-link title="订单管理" link-type="navigateTo" url="" title-class="class-title"/>
+            <van-cell icon="comment-circle" is-link title="评价管理" link-type="navigateTo" url="" title-class="class-title"/>
+            <van-cell icon="printer" is-link title="Banner管理" link-type="navigateTo" url="" title-class="class-title"/>
+            <van-cell icon="friends" is-link title="用户管理" link-type="navigateTo" url="" title-class="class-title"/>
+            <van-cell icon="wap-home" is-link title="学校管理" link-type="navigateTo" url="" title-class="class-title"/>
+            <van-cell icon="manager" is-link title="管理员管理" link-type="navigateTo" url="" title-class="class-title"/>
+        </van-cell-group>
+    </view>
+</van-popup>

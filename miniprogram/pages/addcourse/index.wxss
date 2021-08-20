@@ -1,0 +1,153 @@
+page {
+  background-color: #f4f2f5;
+}
+.shadowLayer {
+  height: 20rpx;
+  width: 100%;
+  background: -webkit-linear-gradient(top, #dbdadb, #fff);
+}
+.picframe {
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  text-align: center;
+}
+.picframe .piccell {
+  text-align: left;
+}
+.picframe .picadd {
+  display: block;
+  margin-top: 25rpx;
+}
+.modifyForm {
+  margin-top: 15rpx;
+}
+.chooseForm {
+  margin-top: 15rpx;
+}
+.ChooseformList {
+  display: flex;
+  flex-direction: low;
+}
+.chotext {
+  background-color: #fff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f6f7f8;
+}
+.chotext .chodesc {
+  margin-left: 40rpx;
+  font-size: 29rpx;
+}
+.dropList {
+  flex: 2.5;
+}
+.dropList .van-dropdown-menu {
+  box-shadow: 0 0 0 0!important;
+  border-bottom: 1rpx solid #f6f7f8;
+}
+.dropList .van-dropdown-menu .van-dropdown-menu__item {
+  justify-content: left;
+}
+.dropList .van-dropdown-menu .van-dropdown-menu__item .van-ellipsis {
+  font-size: 29rpx;
+}
+.eventTime {
+  margin-top: 15rpx;
+  background-color: #fff;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.eventTime .timeDescr {
+  font-size: 29rpx;
+  flex: 1;
+  margin-left: 40rpx;
+}
+.eventTime .dataSection {
+  flex: 2.7;
+  display: flex;
+  flex-direction: row;
+  color: #6a6a6a;
+}
+.eventTime .dataSection .describe {
+  margin: 0 10rpx;
+}
+.introduction {
+  min-height: 110rpx;
+  margin-bottom: 20rpx;
+}
+.introduction .curriIntro {
+  margin-left: 10rpx;
+}
+.submitButton {
+  width: 100%;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.baseChooseformList {
+  display: flex;
+  flex-direction: low;
+  min-height: 100rpx;
+  max-height: 300rpx;
+}
+.baseChooseformList .chotext {
+  background-color: #fff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f6f7f8;
+}
+.baseChooseformList .chotext .chodesc {
+  margin-left: 40rpx;
+  font-size: 29rpx;
+}
+.baseChooseformList .dropList {
+  flex: 2.5;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f6f7f8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+.baseChooseformList .dropList .baseVantags {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10rpx 0;
+}
+.baseChooseformList .dropList .baseVantags .baseTag {
+  margin-left: 15rpx;
+  margin-top: 5rpx;
+}
+.baseChooseformList .dropList .baseAddbutton {
+  margin-left: auto;
+  margin-right: 30rpx;
+  height: 100%;
+  display: flex;
+  align-content: center;
+}
+.van-grid-item__content {
+  padding: 0 0!important;
+}
+.baseChooseItem {
+  height: 100%;
+  width: 98%;
+  padding: 25rpx 0;
+  margin-top: 5rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5rpx;
+}
+.baseChooseItem .baseName {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.baseChoosedItem {
+  background-color: #64ccc2;
+  color: white;
+}

@@ -1,0 +1,16 @@
+<view wx:for="{{banner}}" wx:key="url" class="bannerFrame">
+    <image class="bannerImage" src="{{item.image}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <view class="controButton">
+        <van-button color="linear-gradient(to right, #00DD85, #03c0ad)" size="small" custom-class="buttonLists" bindtap="deletetap" data-index="{{index}}">删除</van-button>
+        <van-button color="linear-gradient(to right, #00DD85, #03c0ad)" size="small" custom-class="buttonLists" bindtap="moveUp" data-index="{{index}}">上移</van-button>
+        <van-button color="linear-gradient(to right, #00DD85, #03c0ad)" size="small" custom-class="buttonLists" bindtap="moveDown" data-index="{{index}}">下移</van-button>
+    </view>
+</view>
+<view class="uploadContainer">
+    
+
+  
+<van-uploader class="uploadButton" bind:after-read="afterRead">
+  <van-button icon="photo" color="linear-gradient(to right, #00DD85, #03c0ad)">上传图片</van-button>
+</van-uploader>
+</view>

@@ -1,0 +1,25 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" 
+disabled='true' bindtap="jumpToSearch"/>
+<van-dropdown-menu>
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="userChange"/>
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="statusChange"/>
+</van-dropdown-menu>
+
+<van-card wx:for="{{userInfor}}" wx:key="id" 
+desc="{{item1.idType=='机构'||item1.idType=='基地'?item1.unitName:item1.name}}" 
+title="{{item1._id}}" 
+wx:if="{{item1.userShow&&item1.statusShow}}"
+ wx:for-item="item1" wx:for-index="index1" custom-class="vancard" desc-class="descclass" thumb="{{item1.avatar}}">
+  <view slot="tags" class="tagsdes">
+    <van-tag plain type="primary" color="#03c0ad">{{item1.idType}}</van-tag>
+    <van-tag type="primary" color="#03c0ad">{{item1.status==0?'未审核':item1.status==1?'审核通过':'审核不通过'}}</van-tag>
+  </view>
+  <view slot="price" class="pricedes">
+    <view>{{item1.date}}</view>
+  </view>
+  <view slot="footer">
+    <van-button size="mini" bindtap="Jumptap" data-_id="{{item1._id}}" data-index="{{index1}}">修改</van-button>
+  </view>
+</van-card>
+
+

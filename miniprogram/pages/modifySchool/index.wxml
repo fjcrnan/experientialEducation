@@ -1,0 +1,57 @@
+<view class="shadowLayer"></view>
+<view class="imgContainer">
+    <view class="imgDescribe">编辑学校</view>
+    <view class="imgCon">
+        <van-image round width="190rpx" height="180rpx" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fp5.zbjimg.com%2Ftask%2F2012-05%2F19%2Fpub%2F4fb7ae859990a.jpg&refer=http%3A%2F%2Fp5.zbjimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623490262&t=b45b09bfcba2d2a7d6ae7e17eccf8f6f" />
+    </view>
+</view>
+<view class="schoolInfor">
+    <view class="datailAddress">
+        <van-cell-group>
+            <van-field model:value="{{schoolName}}" clearable label="学校名称" placeholder="请输入学校名称" autosize />
+        </van-cell-group>
+    </view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+            <view class="leftInfor">学校地址</view>
+            <view class="rightInfor">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+        </view>
+    </picker>
+    <view class="datailAddress">
+        <van-cell-group>
+            <van-field model:value="{{detailAddress}}" clearable label="详细地址" placeholder="请输入详细地址" autosize />
+        </van-cell-group>
+    </view>
+</view>
+<view class="gradeContainer">
+    <view class="gradeText">年级范围</view>
+    <view class="selectStart">
+        <Select show="{{showStart}}" selectData="{{selectDataStart}}" index="{{indexStart}}" bind:select_tap="firselect_tap" bind:option_tap="firoption_tap" class="startSelect"></Select>
+    </view>
+    <view class="to">至</view>
+    <view class="selectEnd">
+        <Select show="{{showEnd}}" selectData="{{selectDataEnd}}" index="{{indexEnd}}" bind:select_tap="endselect_tap" bind:option_tap="endoption_tap" class="endSelect"></Select>
+    </view>
+</view>
+<view class="classContainer">
+    <view class="gradeChoose">
+        <view class="gradeDes">年级选择</view>
+        <view class="gradeSelecter">
+            <Select show="{{showChoose}}" selectData="{{selectDataChoose}}" index="{{indexChoose}}" bind:select_tap="Chooseselect_tap" bind:option_tap="Chooseoption_tap" class="ChooseSelect"></Select>
+        </view>
+        <view class="placeholder"></view>
+    </view>
+    <van-field value="{{ message }}" label="班级填写" type="textarea" placeholder="请输入班级" autosize border="{{ true }}" bind:blur="classStorage" />
+</view>
+<view class="classTips">请填写具体班级号并以逗号进行分隔</view>
+<view class="classView" wx:for="{{messageGather}}" wx:key="gradeItem" wx:for-item="gradeItem" wx:for-index="gradeIndex">
+    <text wx:for="{{gradeItem}}" wx:key="item">{{index}}:{{item}}</text>
+</view>
+<view class="confirm">
+    <van-button type="default" class="van_button" size="normal" custom-class="buttonclass" bindtap="cancel">
+        取消
+    </van-button>
+    <van-button color="#03c0ad" class="van_button" size="normal" custom-class="buttonclass" bindtap="modifyClick">
+        保存
+    </van-button>
+</view>

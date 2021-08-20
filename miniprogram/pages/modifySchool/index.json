@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"修改学校信息",
+  "usingComponents": {
+    "Select":"../../components/Select/Select"
+  }
+}

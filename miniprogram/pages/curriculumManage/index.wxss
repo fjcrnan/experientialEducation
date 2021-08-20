@@ -1,0 +1,125 @@
+page {
+  background-color: #f7f8fa;
+}
+.addButton {
+  position: fixed;
+  top: 90vh;
+  left: 82vw;
+  z-index: 99;
+}
+.addCurri .van-button__text {
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+}
+.DropdownMenu {
+  width: 100%;
+  height: 110rpx;
+}
+.content {
+  margin-top: 10rpx;
+}
+.content .listCustomOn {
+  position: relative;
+  background-color: #fff;
+}
+.content .listCustomOn .describe {
+  color: var(--ScondarytextColor);
+  display: flex;
+  flex-direction: column;
+}
+.content .listCustomOn .tagsName {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 38rpx;
+  max-height: 72rpx;
+}
+.content .listCustomOn .tagsName van-tag {
+  margin-top: 5rpx;
+}
+.content .listCustomOn :nth-of-type(1) {
+  margin-top: 0;
+}
+.content .listCustomOn .tagList {
+  margin-left: 5rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .listCustomOn .numdes {
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rpx;
+}
+.content .listCustomOn .numdes .coursePrice {
+  color: red;
+  font-weight: bold;
+  font-size: 28rpx;
+  flex: 3;
+  text-align: left;
+}
+.content .listCustomOn .numdes .courseCategory {
+  flex: 1;
+}
+.content .listCustomOn .van-tag {
+  background-color: var(--themeColor);
+}
+.content .listCustomOn .secbutton {
+  margin-left: 10rpx;
+}
+.content .listCustomDown {
+  position: relative;
+  background-color: #fff;
+}
+.content .listCustomDown .describe {
+  color: var(--ScondarytextColor);
+  display: flex;
+  flex-direction: column;
+}
+.content .listCustomDown .tagsName {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 38rpx;
+  max-height: 72rpx;
+}
+.content .listCustomDown .tagsName van-tag {
+  margin-top: 5rpx;
+}
+.content .listCustomDown :nth-of-type(1) {
+  margin-top: 0;
+}
+.content .listCustomDown .tagList {
+  margin-left: 5rpx;
+}
+.content .listCustomDown .numdes {
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rpx;
+}
+.content .listCustomDown .numdes .coursePrice {
+  color: red;
+  font-size: 28rpx;
+  font-weight: bold;
+  flex: 3;
+  text-align: left;
+}
+.content .listCustomDown .numdes .courseCategory {
+  flex: 1;
+}
+.content .listCustomDown .van-tag {
+  background-color: red;
+}
+.content .listCustomDown .secbutton {
+  margin-left: 5rpx;
+}
+.lastContent {
+  margin-bottom: 130rpx;
+}
+.fircon {
+  margin-top: 0;
+}
+.noticeInfor {
+  text-align: center;
+  margin-top: 10rpx;
+}

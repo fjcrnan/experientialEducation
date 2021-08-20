@@ -1,0 +1,120 @@
+<view bindtouchstart="touchStart" bindtouchmove="touchMove">
+<view class="shadowLayer"></view>
+<form bindsubmit="bindSubmit">
+<view class="picframe">
+    <van-cell-group class="piccell">
+        <van-cell title="修改课程图片" />
+    </van-cell-group>
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="fileDelete" class="picadd" preview-size="160rpx"  max-count="1"/>
+</view>
+<view class="modifyForm">
+    <van-cell-group>
+        <van-field value="{{modifyCourseInformation.course_id}}" label="课程ID" disabled name="course_id"/>
+        <van-field value="{{modifyCourseInformation.course_title}}" clearable label="课程标题" name="course_title"/>
+        <van-field value="999" label="报名量" disabled />
+        <van-field value="{{modifyCourseInformation.course_price}}" clearable label="课程价格" name="course_price" type="digit"/>
+    </van-cell-group>
+</view>
+<view class="chooseForm">
+    <view class="ChooseformList">
+        <view class="chotext">
+            <text class="chodesc">课程状态</text>
+        </view>
+        <view class="dropList">
+            <van-dropdown-menu class="selectList">
+                <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="CourseStartUserchange" id='courseStatus'/>
+            </van-dropdown-menu>
+        </view>
+    </view>
+    <view class="ChooseformList">
+        <view class="chotext">
+            <text class="chodesc">上架状态</text>
+        </view>
+        <view class="dropList">
+            <van-dropdown-menu>
+                <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}"  bind:change="OnlineUserchange" id='courseOnline'/>
+            </van-dropdown-menu>
+        </view>
+    </view>
+    <view class="ChooseformList">
+        <view class="chotext">
+            <text class="chodesc">课程类别</text>
+        </view>
+        <view class="dropList">
+            <van-dropdown-menu class="selectList">
+                <van-dropdown-item value="{{ value5 }}" options="{{ option5 }}"  bind:change="CategoryUserchange" id='courseCategory'/>
+            </van-dropdown-menu>
+        </view>
+    </view>
+    <view class="ChooseformList">
+        <view class="chotext">
+            <text class="chodesc">导师</text>
+        </view>
+        <view class="dropList">
+            <van-dropdown-menu class="selectList">
+                <van-dropdown-item value="{{ value3 }}" options="{{ option3 }}"  bind:change="tutorUserchange" id='tutorChoose'/>
+            </van-dropdown-menu>
+        </view>
+    </view>
+    <view class="ChooseformList">
+        <view class="chotext">
+            <text class="chodesc">机构</text>
+        </view>
+        <view class="dropList">
+            <van-dropdown-menu class="selectList">
+                <van-dropdown-item value="{{ value4 }}" options="{{ option4 }}"  bind:change="OrganUserchange" id='organChoose'/>
+            </van-dropdown-menu>
+        </view>
+    </view>
+    <view class="baseChooseformList">
+        <view class="chotext">
+            <text class="chodesc">基地</text>
+        </view>
+        <view class="dropList">
+            <view class="baseVantags">
+                <van-tag closeable plain size="medium" type="primary" id="primary" bind:close="onClose" color="#03c0ad" wx:for="{{basesChoose}}" wx:key="id" custom-class="baseTag" data-index="{{index}}" wx:if="{{item.choose}}">
+                    {{item.unitName}}
+                </van-tag>
+            </view>
+            <view class="baseAddbutton" bindtap="showPopup">
+                <van-icon name="add" color="#03c0ad" size="25" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="eventTime">
+    <text class="timeDescr">报名时间：</text>
+    <view class="dataSection">
+        <picker mode="date" class="dateBind" value="{{course_stardate}}" start="2020-09-01" end="2025-03-20" bindchange="stardatebindDateChange">
+            <view class="starPicker">{{modifyCourseInformation.course_stardate}}</view>
+        </picker>
+        <view class="describe">至</view>
+        <picker mode="date" class="dateBind" value="{{course_enddate}}" start="2020-09-01" end="2025-03-20" bindchange="enddatebindDateChange">
+            <view class="endPicker">{{modifyCourseInformation.course_enddate}}</view>
+        </picker>
+    </view>
+</view>
+<view class="introduction">
+    <van-cell-group>
+        <van-field value="{{ modifyCourseInformation.course_introduce }}" label-class="curriIntro" label="课程简介" type="textarea" placeholder="课程简介课程简介课程简介课程简介" autosize border="{{ false }}" name="course_introduce"/>
+    </van-cell-group>
+</view>
+<view class="savebutton">
+    <van-button type="default" bindtap="cancel">取消</van-button>
+    <view class="seat"></view>
+    <van-button type="info" size="normal" color="#03c0ad" form-type="submit">保存修改</van-button>
+</view>
+<van-popup show="{{ popshow }}" bind:close="PoponClose" position="bottom" custom-style="height: 60%;">
+    <van-grid column-num="3" border="{{ true }}">
+        <van-grid-item use-slot wx:for="{{ basesChoose }}" wx:key="id">
+           <view class="baseChooseItem {{item.choose?'baseChoosedItem':''}}" bindtap="baseChooseTap" data-index="{{index}}">
+               <view class="img">
+               <van-image width="150rpx" height="150rpx" src="{{item.avatar}}" radius="5rpx"/>
+               </view>
+               <view class="baseName">{{item.unitName}}</view>
+           </view>     
+        </van-grid-item>
+    </van-grid>
+</van-popup>
+</form>
+</view>

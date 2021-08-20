@@ -1,0 +1,101 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/curriculumManage/index",
+          "pathName": "pages/curriculumManage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/index",
+          "pathName": "pages/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modifycourse/index",
+          "pathName": "pages/modifycourse/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bannerManage/index",
+          "pathName": "pages/bannerManage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderManage/index",
+          "pathName": "pages/orderManage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/schoolManage/index",
+          "pathName": "pages/schoolManage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/administrator/index",
+          "pathName": "pages/administrator/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/userManage/index",
+          "pathName": "pages/userManage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addcourse/index",
+          "pathName": "pages/addcourse/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modifypersonaluser/index",
+          "pathName": "pages/modifypersonaluser/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modifybaseuser/index",
+          "pathName": "pages/modifybaseuser/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addSchools/index",
+          "pathName": "pages/addSchools/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addManager/index",
+          "pathName": "pages/addManager/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

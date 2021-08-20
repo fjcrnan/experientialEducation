@@ -1,0 +1,67 @@
+page{
+  --themeColor:#03c0ad;
+  --ScondarytextColor:#a2a2a2;
+  --tag-font-size:24rpx;
+  --tag-line-height:32rpx;
+  --button-normal-font-size:28rpx;
+  --button-border-width:2rpx;
+  --button-info-border-color:#1989fa;
+  --button-default-height:88rpx;
+  --button-line-height:40rpx;
+  --button-border-radius:4rpx;
+  --animation-duration-fast:1s;
+  --field-icon-size:32rpx;
+  --cell-vertical-padding:20rpx;
+  --cell-horizontal-padding:32rpx;
+  --cell-font-size:28rpx;
+  --cell-line-height:48rpx;
+  --cell-text-color:#323233;
+  --cell-background-color:#fff;
+  --dropdown-menu-height:100rpx;
+  --border-radius-lg:16rpx;
+  --button-round-border-radius:1998rpx;
+  --button-line-height:40rpx;
+  --card-padding:16rpx 32rpx;
+  --card-font-size:24rpx;
+  --card-text-color:#323233;
+  --card-thumb-size:176rpx;
+  --padding-xs:16rpx;
+  --tag-round-border-radius:1998rpx;
+  --tag-padding:0 8rpx;
+  --tag-text-color:#fff;
+  --card-title-line-height:32rpx;
+  --card-price-font-size:24rpx;
+  --card-price-integer-font-size:32rpx;
+  --button-mini-min-width:100rpx;
+  --button-mini-height:44rpx;
+  --button-mini-font-size:20rpx;
+  --button-border-radius:4rpx;
+  --dropdown-menu-height:100rpx;
+  --dropdown-menu-title-padding:0 16rpx;
+  --dropdown-menu-title-font-size:30rpx;
+  --dropdown-menu-title-line-height:36rpx;
+  --tabs-card-height:60rpx;
+  --border-width-base:2rpx;
+  --border-radius-sm:4rpx;
+  --tab-font-size:28rpx;
+  --grid-item-content-padding:32rpx 16rpx;
+  --grid-item-icon-size:52rpx;
+  --grid-item-text-font-size:24rpx;
+  --button-small-min-width:120rpx;
+  --button-small-height:60rpx;
+  --button-small-font-size:24rpx;
+  --search-padding:20rpx 24rpx;
+  --padding-sm:24rpx;
+  --grid-item-content-padding:32rpx 16rpx;
+}
+@import"./style/iconfont.wxss";
+page,view,text,swiper,swiper-item,image,navigator,cover-view{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+}

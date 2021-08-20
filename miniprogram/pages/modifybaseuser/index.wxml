@@ -1,0 +1,32 @@
+<view class="headsculpture">
+    <van-image round width="5rem" height="5rem" src="{{UserInformation.avatar}}" />
+</view>
+<van-cell-group>
+    <van-field value="{{ UserInformation._id }}" label="组织ID" disabled border="{{ false }}"/>
+    <van-field value="{{ UserInformation.unitName }}" label="组织名" disabled placeholder="文峰" border="{{ false }}" />
+    <van-field value="{{ UserInformation.legalName }}" label="法人代表" disabled placeholder="张三" border="{{ false }}"/>
+    <van-field value="{{ UserInformation.unitTel }}" label="单位电话" disabled placeholder="13288888888" border="{{ false }}"/>
+    <van-field value="{{ value }}" label="地址" disabled placeholder="广东省广州市从化区太平镇" border="{{ false }}"/>
+    <van-field value="{{ UserInformation.idType }}" label="身份" disabled placeholder="机构" border="{{ false }}" />
+    <van-field value="{{ UserInformation.tel }}" label="联系电话" disabled placeholder="13888888888" border="{{ false }}"/>
+</van-cell-group>
+<van-cell-group custom-class="examine">
+    <view class="ChooseformList">
+        <view class="chotext">
+            <text class="chodesc">审核状态</text>
+        </view>
+        <view class="dropList">
+            <van-dropdown-menu class="selectList">
+                <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="statusChange"/>
+            </van-dropdown-menu>
+        </view>
+    </view>
+</van-cell-group>
+<van-transition show="{{ suggestShow }}" name="fade-down">
+    <van-field model:value="{{ suggest }}" label="不通过原因" placeholder="" border="{{ true }}"/>
+</van-transition>
+<view class="savebutton">
+    <van-button type="default" bindtap="cancel">取消</van-button>
+    <view class="seat"></view>
+    <van-button type="info" size="normal" color="#03c0ad" bindtap="saveClick">保存修改</van-button>
+</view>

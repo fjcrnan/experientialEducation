@@ -1,0 +1,19 @@
+<view class="realSearchInput">
+    <van-search model:value="{{ searchValue }}" placeholder="请输入搜索关键词" shape="round" background='#03c0ad'
+        class="realInput" bind:search="InputsearchOnchange" bindtap="showRecords">
+    </van-search>
+    <view class="realCancel" bindtap="changeFakeSearch">取消</view>
+</view>
+
+<view class="searchRecord" wx:if="{{searchBarHidden}}">
+    <view class="recordBar" style="display:{{searchBarText? 'none':'flex'}}!important">
+        <view class="recordText">搜索历史</view>
+        <view class="clearRecord"><van-icon name="delete-o"/>清空</view>
+    </view>
+    <view class="allRecords">
+        <view class="records" wx:for="{{searchRecord}}" hidden="{{showRecord}}" wx:for-index="recordIndex"
+            wx:for-item="recordItem" wx:key="recordIndex" bindtap="recordsSearch" data-index="{{recordIndex}}">
+            <text>{{recordItem}}</text>
+        </view>
+    </view>
+</view>

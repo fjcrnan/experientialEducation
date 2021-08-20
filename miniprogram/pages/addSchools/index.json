@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"添加学校",
+  "usingComponents": {
+    "Select":"../../components/Select/Select"
+  }
+}

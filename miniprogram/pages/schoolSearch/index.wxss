@@ -1,0 +1,47 @@
+@import"../../template/SearchBar.wxss";
+page {
+  background-color: #f4f2f5;
+}
+.outerGrid .van-grid-item__content {
+  background-color: #f4f2f5;
+  padding-bottom: 0;
+}
+.outerGrid .detailLists {
+  background-color: #fff;
+  width: 45vw;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.outerGrid .detailLists .van-cell__title {
+  color: var(--ScondarytextColor);
+}
+.outerGrid .detailLists .imgList {
+  width: 40vw;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+}
+.outerGrid .detailLists .schName {
+  margin-top: 10rpx;
+}
+.outerGrid .detailLists .van-cell {
+  width: 40vw;
+  padding: 1rpx 7rpx;
+}
+.outerGrid .detailLists .van-cell__title {
+  font-size: 25rpx;
+}
+.outerGrid .detailLists .van-cell__value {
+  font-size: 25rpx;
+  flex: 1.6;
+}
+.outerGrid .detailLists .regionChoose {
+  font-size: 25rpx;
+  margin-top: 5rpx;
+}
+.picker {
+  margin-top: 10rpx;
+  color: var(--ScondarytextColor);
+}

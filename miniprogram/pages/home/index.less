@@ -1,0 +1,207 @@
+page{
+    background-color: #f4f2f5;
+}
+.perInformation{
+    background-color: #fff;
+    .SeinforCard{
+        background-color: #fff;
+        .manaimg{
+            margin-top: 10rpx;
+        }
+        .manatitle{
+            font-size: 30rpx;
+            font-weight: bold;
+            margin-top: 30rpx;
+        }
+        .manadesc{
+            margin-top: 10rpx;
+            display: flex;
+            flex-direction: column;
+            .sectext{
+                margin-top: 10rpx;
+            }
+        }
+    }
+    
+}
+.gird{
+    margin-top: 15rpx;
+}
+.dataSection{
+    margin-top: 10rpx;
+    width: 100%;
+    height: 82rpx;
+    padding: 20rpx;
+    display: flex;
+    background-color: white;
+    .dateBind{
+        height: 60rpx;
+        width: 275rpx;
+        .starPicker{
+            font-size: 27rpx;
+            border-radius: 10rpx;
+            height: 50rpx;
+            width: 260rpx;
+            color: #6a6a6a;
+            border: 1rpx solid rgb(225, 228, 228);
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 0 10rpx;
+            .icon-rili{
+                color: rgb(192, 192, 191);
+                position: absolute;
+                top: auto;
+                right: 10rpx;
+            }
+        }
+        .describe{
+            display: block;
+            text-align: center;
+        }
+        .endPicker{
+            margin-left: 20rpx;
+            font-size: 27rpx;
+            border-radius: 10rpx;
+            height: 50rpx;
+            width: 260rpx;
+            color: #6a6a6a;
+            border: 1rpx solid rgb(225, 228, 228);
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 0 10rpx;
+            .icon-rili{
+                color: rgb(192, 192, 191);
+                position: absolute;
+                top: auto;
+                right: 10rpx;
+            }
+        }
+    }
+}
+.threeBoxes{
+    background-color: white;
+    height: 200rpx;
+    width: 100%;
+    display: flex;
+    .listBox{
+        border-radius: 10rpx;
+        height: 170rpx;
+        margin: 15rpx;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border: 4rpx solid #81abcc;
+        text-align: center;
+        justify-content: center;
+        font-size: 27rpx;
+        .iconfont{
+            font-size: 30px;
+            color: #1869ce;
+        }
+    }
+}
+.mainContent{
+    margin-top: 15rpx;
+    background-color: white;
+    width: 100%;
+    height: ~'calc( 100vh - 282rpx - 60rpx - 44rpx)';
+    padding-top: 20rpx;
+    box-sizing: border-box;
+    .upperPart{
+        margin-top: 20rpx;
+        width: 100%;
+        padding: 0 35rpx;
+        height: 120rpx;
+        display: flex;
+        .list_content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .user_list{
+                font-size: 25rpx;
+                flex: 1;
+            }
+            .number{
+                flex: 1.6;
+                font-size: 40rpx;
+                line-height: 60rpx;
+                display: block;
+                border-right: 1px solid #dedede;
+            }
+            .annotation{
+                color: var(--ScondarytextColor);
+                flex: 1;
+                font-size: 21rpx;
+                display: block;
+                border-right: 1px solid #dedede;
+            }
+            &:nth-child(2){
+                margin-left: 30rpx;
+            }
+            &:nth-child(3){
+                margin-left: 30rpx;
+            }
+        }
+    }
+    .lowerPart{
+        margin-top: 40rpx;
+        width: 100%;
+        padding: 0 35rpx;
+        height: 120rpx;
+        display: flex;
+        .list_content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .user_list{
+                font-size: 25rpx;
+                flex: 1;
+            }
+            .number{
+                flex: 1;
+                font-size: 40rpx;
+                border-right: 1px solid #dedede;
+            }
+            .annotation{
+                color:var(--ScondarytextColor);
+                flex: 1;
+                font-size: 21rpx;
+                border-right: 1px solid #dedede;
+            }
+            &:nth-child(2){
+                margin-left: 30rpx;
+            }
+            &:nth-child(3){
+                margin-left: 30rpx;
+            }
+            &:nth-child(3) .number{
+                border-right: 0;
+            }
+            &:nth-child(3) .annotation{
+                border-right: 0;
+            }
+        }
+    }
+    .chart{
+        width: 100%;
+        height: 35vh;
+        margin-top: 20rpx;
+        .container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+          } 
+    }
+}
+.vanGirdItem{
+    color: #a2a2a2 !important;
+}

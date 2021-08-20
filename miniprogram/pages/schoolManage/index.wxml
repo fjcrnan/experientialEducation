@@ -1,0 +1,20 @@
+<view class="searchheader">
+    <view class="searchinput" bindtap="jumpSearchPage">
+        <van-search value="{{ value }}" placeholder="请输入搜索关键词" disabled="true"/>
+    </view>
+    <view class="headericon">
+        <van-icon name="add" size="25px" color="#03c0ad" bind:click="showPopupadd" />
+    </view>
+</view>
+<van-grid column-num="2" border="{{ false }}" class="outerGrid">
+    <van-grid-item use-slot wx:for="{{schoolLists}}" wx:key="_id" bindtap="modify" data-id="{{item._id}}">
+        <view class="detailLists">
+            <image class="imgList" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1077365967,1556637322&fm=26&gp=0.jpg" mode="widthFix"></image>
+            <view class="schName">{{item.name}}</view>
+            <view class="regionChoose">
+                <view class="picker">省市：{{item.region[0]}}{{item.region[1]}}{{item.region[2]}}</view>
+            </view>
+            <van-cell title="年级：" value="{{item.grade[0]}}至{{item.grade[item.gradeLength]}}" bindtap="popupChange" border="{{ false }}" />
+        </view>
+    </van-grid-item>
+</van-grid>

@@ -1,0 +1,3 @@
+<van-search value="{{ value }}" placeholder="请输入搜索{{keyWords}}"  bind:change="onChange" bind:clear="onClear">
+    <!-- use-action-slot<view slot="action" bind:tap="onClick">搜索</view> -->
+</van-search>

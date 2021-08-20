@@ -1,0 +1,20 @@
+<form bindsubmit="bindSubmit">
+<view class="container">
+    <view class="pic">
+        <van-image round width="10rem" height="10rem" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F12%2F04%2Ff8bc5ce94d18939cca7e94ef42e7387b.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617869561&t=6cfeb3e6dc5b50042fecda2d8b5d94e2" />
+    </view>
+    <text class="title">从化研学小程序管理端</text>
+    <view class="userName" wx:if="{{authorize}}">
+        <van-cell-group>
+            <van-field value="{{ username }}"  clearable label="用户名" 
+            placeholder="请输入用户名" name="userId"/>
+            <van-field value="{{ password }}" type="password" 
+            label="密码" placeholder="请输入密码"  border="{{ false }}" 
+             name="password"/>
+        </van-cell-group>
+    </view>
+    <!-- <button open-type="getUserInfo" type="primary" class="landButton" plain="true" wx:if="{{!authorize}}" bindgetuserinfo="authorizeLogin">微信授权登录</button> -->
+    <button type="primary" class="landButton" plain="true" wx:if="{{!authorize}}" bindtap="authorizeLogin">微信授权登录</button>
+    <button type="primary" class="landButton"  form-type="submit" wx:if="{{authorize}}">登录</button>
+</view>
+</form>

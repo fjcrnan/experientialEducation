@@ -1,0 +1,156 @@
+page {
+  background-color: #f4f2f5;
+}
+.shadowLayer {
+  height: 20rpx;
+  width: 100%;
+  background: -webkit-linear-gradient(top, #dbdadb, #fff);
+}
+.imgContainer {
+  background-color: #fff;
+  width: 100%;
+}
+.imgContainer .imgDescribe {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  padding-left: 20rpx;
+  border-bottom: 1px solid #f6f7f8;
+  font-size: 29rpx;
+  align-items: center;
+}
+.imgContainer .imgCon {
+  width: 100%;
+  height: 230rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.schoolInfor {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.schoolInfor .picker {
+  height: 80rpx;
+  width: 95vw;
+  border-bottom: 1px solid #f6f7f8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+}
+.schoolInfor .picker .leftInfor {
+  margin-left: 9rpx;
+  flex: 2.7;
+  color: #646566;
+}
+.schoolInfor .picker .rightInfor {
+  flex: 7;
+  color: #c8c9cc;
+}
+.schoolInfor .datailAddress {
+  width: 100%;
+}
+.gradeContainer {
+  background-color: #fff;
+  margin-top: 15rpx;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.gradeContainer .gradeText {
+  font-size: 28rpx;
+  flex: 1.9;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.gradeContainer .selectStart {
+  flex: 3.5;
+  display: flex;
+  align-items: center;
+}
+.gradeContainer .selectStart .startSelect {
+  width: 100%;
+  z-index: 10;
+}
+.gradeContainer .to {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gradeContainer .selectEnd {
+  flex: 3.5;
+  display: flex;
+  align-items: center;
+}
+.gradeContainer .selectEnd .endSelect {
+  width: 100%;
+  z-index: 9;
+}
+.classContainer {
+  width: 100%;
+  margin-top: 15rpx;
+  background-color: #fff;
+}
+.classContainer .gradeChoose {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  border-bottom: 1px solid #f6f7f8;
+}
+.classContainer .gradeChoose .gradeDes {
+  flex: 2.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+.classContainer .gradeChoose .gradeSelecter {
+  flex: 3.5;
+  display: flex;
+  align-items: center;
+}
+.classContainer .gradeChoose .gradeSelecter .ChooseSelect {
+  width: 100%;
+  z-index: 9;
+}
+.classContainer .gradeChoose .placeholder {
+  flex: 4;
+}
+.confirm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.confirm .van_button {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm .buttonclass {
+  width: 75%;
+  height: 75rpx;
+  border-radius: 10rpx;
+}
+.classTips {
+  background-color: #fff;
+  font-size: 20rpx;
+  padding: 10rpx 38rpx;
+  color: #d3c9cc;
+  border-bottom: 1rpx #f6f7f8 solid;
+}
+.classView {
+  background-color: #fff;
+  padding: 10rpx 38rpx;
+  font-size: 28rpx;
+}

@@ -1,0 +1,123 @@
+page{
+    background-color: #f4f2f5;
+}
+.fakeContainer{
+    width: 100%;
+    height: 116rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fakeSearchInput{
+    width: 93%;
+    height: 72rpx;
+    background-color: #f7f8fa;
+    color: #c8c9cc;
+    display: flex;
+    align-items: center;
+    padding-left: 14rpx;
+    font-size: 28rpx;
+}
+.realInput{
+    flex: 9;
+}
+.realSearchInput{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #03c0ad;
+}
+.realCancel{
+    background-color: #03c0ad;
+    flex: 1;
+    padding-bottom: 10rpx;
+    padding-right: 8rpx;
+}
+.orderLists{
+    margin-top: 20rpx;
+    .orderheader{
+        width: 100%;
+        height: 80rpx;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .state{
+            margin-left: 40rpx;
+            font-weight: 550;
+        }
+        .oddNumer{
+            color: var(--ScondarytextColor);
+            margin-left: 50rpx;
+            font-size: 25rpx;
+        }
+    }
+    .divider{
+        .van-divider{
+            margin: 0 !important;
+        }
+    }
+    .detail{
+    background-color: #fff;
+    position: relative;
+    .descClass{
+        color:var(--ScondarytextColor);
+        display: flex;
+        flex-direction: column;
+    }
+    .tagsName{
+        margin-top: 5rpx;
+        margin-bottom: 5rpx;
+        .base{
+            display: flex;
+            flex-wrap: wrap;
+            van-tag{
+                margin-top: 5rpx;
+            }
+        }
+    }
+    .orderTime{
+        color:var(--ScondarytextColor);
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .curriPrice{
+            flex: 2;
+            color: red;
+            font-size: 28rpx;
+            font-weight: bold;
+        }
+        .curriTime{
+            flex: 8;
+            text-align: right;
+        }
+    }
+    .buyerInfor{
+        .van-divider{
+            margin: 10rpx 0 !important;
+        }
+        .schName{
+            margin-left: 100rpx;
+        }
+        .phoneNum{
+            margin-left: 65rpx;
+        }
+    }
+    .footerButton{
+        width: 100%;
+        height: 80rpx;
+        .van-divider{
+            margin:10rpx 0rpx !important;
+        }
+    }
+    .tagList{
+        margin-left: 5rpx;
+    }
+    }
+}
+.noticeInfor{
+    text-align: center;
+}

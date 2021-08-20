@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"添加管理员",
+  "usingComponents": {
+    "Select":"../../components/Select/Select"
+  }
+}

@@ -1,0 +1,40 @@
+<view class="addButton">
+    <van-button round type="info" custom-class="addCurri" color="linear-gradient(to right,  #00DD85, #03c0ad)" bindtap="AddJumpPage">
+        <van-icon name="plus" size="14px" class="addicon" />
+    </van-button>
+</view>
+<view class="DropdownMenu">
+    <van-dropdown-menu>
+        <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="userchange" />
+        <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+    </van-dropdown-menu>
+</view>
+<view class="content {{course_index==curriculumContent.length-1?'lastContent':''}}" wx:for="{{curriculumContent}}" wx:key="_id" wx:for-item="course_item" wx:for-index="course_index" data-index="{{course_index}}" hidden="{{course_item.show}}">
+    <van-card tag="{{course_item.online==0?'未上架':'已上架'}}"  title="{{course_item.course_title}}" custom-class="{{course_item.online===1?'listCustomOn':'listCustomDown'}}" thumb="{{course_item.courseImg}}">
+        <view slot="num" class="numdes">
+            <view class="coursePrice"><text >￥{{course_item.course_price}}</text></view>
+            <view class="courseCategory">{{course_item.course_category==0?'红色文化类':course_item.course_category==1?'现代农业类':course_item.course_category==2?'安全应急类':course_item.course_category==3?'传统文化类':''}}</view>
+        </view>
+        <view slot="desc" class="describe">
+            <text>课程ID：{{course_item.course_id}}</text>
+            <text>开始时间：{{course_item.course_stardate}}</text>
+        </view>
+        <view slot="tags" class="tagsName">
+            <!-- <van-tag type="primary" class="tagList" color="#03c0ad">{{course_item.organ}}</van-tag> -->
+            <van-tag type="primary" custom-class="tagList" color="#03c0ad" wx:for="{{course_item.base}}" wx:for-item="base_item" wx:key="id">{{base_item.unitName}}</van-tag>
+        </view>
+        <view slot="footer">
+            <van-button size="mini" bindtap="bindViewTapPuton" data-index="{{course_index}}">
+                {{course_item.online===0?'上架':'下架'}}
+            </van-button>
+            <van-button size="mini" bindtap='ModifyJumpPage' custom-class="secbutton" data-id="{{course_item._id}}">修改</van-button>
+        </view>
+    </van-card>
+</view>
+<view>
+    <modal title="提示" hidden="{{modalHiddenPuton}}" confirm-text="确定" cancel-text="取消" bindconfirm="modalBindaconfirmPuton" bindcancel="modalBindcancelPuton">
+        <view class="noticeInfor">
+            <text>是否{{onshelfStatus}}课程？</text>
+        </view>
+    </modal>
+</view>

@@ -1,0 +1,121 @@
+page {
+  background-color: #f4f2f5;
+}
+.searchheader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.searchheader .headericon {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  text-align: center;
+}
+.searchheader .searchinput {
+  flex: 8;
+}
+.shadowLayer {
+  height: 20rpx;
+  width: 100%;
+  background: -webkit-linear-gradient(top, #dbdadb, #fff);
+}
+.adminContainer {
+  background-color: #fff;
+  height: 320rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+}
+.adminContainer .face {
+  flex: 1;
+  height: 100%;
+  background-color: white;
+  text-align: center;
+  padding-top: 50rpx;
+}
+.adminContainer .adminInfor {
+  flex: 4.5;
+  height: 100%;
+  padding: 0 20rpx;
+}
+.adminContainer .adminInfor .adminName {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+.adminContainer .adminInfor .adminName .managerName {
+  margin-left: 35rpx;
+}
+.adminContainer .adminInfor .adminName .adminId {
+  margin-left: 30rpx;
+  font-size: 25rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: flex-end;
+  color: var(--ScondarytextColor);
+}
+.adminContainer .adminInfor .ChooseformList {
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: low;
+  margin-top: 0rpx;
+}
+.adminContainer .adminInfor .ChooseformList .chotext {
+  background-color: #fff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #f6f7f8;
+  border-bottom: 1rpx solid #f6f7f8;
+  height: 70rpx;
+}
+.adminContainer .adminInfor .ChooseformList .chotext .chodesc {
+  margin-left: 40rpx;
+  font-size: 25rpx;
+}
+.adminContainer .adminInfor .ChooseformList .staticLevel {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #f6f7f8;
+  border-bottom: 1rpx solid #f6f7f8;
+}
+.adminContainer .adminInfor .ChooseformList .dropList {
+  flex: 2.5;
+}
+.adminContainer .adminInfor .ChooseformList .dropList .van-dropdown-menu {
+  box-shadow: 0 0 0 0!important;
+  border-top: 1rpx solid #f6f7f8;
+  border-bottom: 1rpx solid #f6f7f8;
+  height: 70rpx;
+}
+.adminContainer .adminInfor .ChooseformList .dropList .van-dropdown-menu .van-dropdown-menu__item {
+  justify-content: left;
+}
+.adminContainer .adminInfor .ChooseformList .dropList .van-dropdown-menu .van-dropdown-menu__item .van-ellipsis {
+  font-size: 25rpx;
+}
+.adminContainer .adminInfor .ChooseformList:nth-of-type(2) .chotext {
+  border-bottom: 0;
+}
+.adminContainer .adminInfor .ChooseformList:nth-of-type(2) .dropList .van-dropdown-menu {
+  border-bottom: 0;
+}
+.adminContainer .adminInfor .ChooseformList:nth-of-type(2) .staticLevel {
+  border-bottom: 0;
+}
+.adminContainer .adminInfor .operabutton {
+  margin-top: 25rpx;
+}
+.adminContainer .adminInfor .operabutton .delebutton {
+  margin-left: 10rpx;
+}
+.adminContainer .noticeInfor {
+  text-align: center;
+  margin-top: 10rpx;
+}
+.adminContainer:last-child {
+  margin-bottom: 100rpx;
+}

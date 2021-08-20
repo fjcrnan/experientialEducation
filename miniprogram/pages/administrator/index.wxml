@@ -1,0 +1,71 @@
+<view bindtouchstart="touchStart" bindtouchmove="touchMove">
+    <view class="shadowLayer"></view>
+    <view class="searchheader">
+        <view class="searchinput">
+            <van-search value="{{ value }}" placeholder="请输入搜索信息" bind:change="searchUser" clearable="false"/>
+        </view>
+        <view class="headericon">
+            <van-icon name="add" size="25px" color="#03c0ad" bind:click="managerAdd" />
+        </view>
+    </view>
+    <view class="adminContainer" wx:for="{{userInformation}}" wx:key="_id" wx:if="{{item.show}}">
+        <view class="face">
+            <van-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png" size="55px" />
+        </view>
+        <view class="adminInfor">
+            <view class="adminName">
+                <view>管理员名称</view>
+                <view class="managerName">{{item.name}}</view>
+                <view class="adminId">ID：{{item.userId}}</view>
+            </view>
+            <view class="ChooseformList">
+                <view class="chotext">
+                    <text class="chodesc">管理级别</text>
+                </view>
+                <view class="staticLevel" style="display:{{item.browse?'none':'flex'}};">
+                    {{item.option1[item.value1].text}}
+                </view>
+                <view class="dropList" hidden="{{item.edit}}">
+                    <van-dropdown-menu class="selectList">
+                        <van-dropdown-item value="{{ item.value1 }}" options="{{ item.option1 }}" bind:change="levelchange" data-index="{{index}}" id='adminLevel{{index}}' />
+                    </van-dropdown-menu>
+                </view>
+            </view>
+            <view class="ChooseformList">
+                <view class="chotext">
+                    <text class="chodesc">状态</text>
+                </view>
+                <view class="staticLevel" style="display:{{item.browse?'none':'flex'}}">
+                    {{item.option2[item.value2].text}}
+                </view>
+                <view class="dropList" hidden="{{item.edit}}">
+                    <van-dropdown-menu class="selectList">
+                        <van-dropdown-item value="{{ item.value2 }}" options="{{ item.option2 }}" bind:change="statuschange" data-index="{{index}}" id='adminStatus{{index}}' />
+                    </van-dropdown-menu>
+                </view>
+            </view>
+            <view class="operabutton">
+                <van-button type="info" size="mini" color="#03c0ad" bindtap="editChange" data-index="{{index}}">
+                    {{item.state}}
+                </van-button>
+                <van-button type="danger" size="mini" class="delebutton" bindtap="bindViewTapPuton" data-index="{{index}}">
+                    删除
+                </van-button>
+            </view>
+        </view>
+    </view>
+</view>
+<view>
+    <modal title="提示" hidden="{{HiddenPuton}}" confirm-text="确定" cancel-text="取消" bindconfirm="modalBindaconfirmPuton" bindcancel="modalBindcancelPuton">
+        <view class="noticeInfor">
+            <text>是否保存修改？</text>
+        </view>
+    </modal>
+</view>
+<view>
+    <modal title="提示" hidden="{{modalHiddenPuton}}" confirm-text="确定" cancel-text="取消" bindconfirm="deleteBindaconfirmPuton" bindcancel="deleteBindcancelPuton">
+        <view class="noticeInfor">
+            <text>是否删除用户？</text>
+        </view>
+    </modal>
+</view>

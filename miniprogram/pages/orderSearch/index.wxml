@@ -1,0 +1,49 @@
+<include src="../../template/SearchBar.wxml"></include>
+
+<view class="orderLists" wx:for="{{searchOrderLists}}" wx:key="id">
+    <view class="orderheader">
+        <text class="state">{{item.status}}</text>
+        <text class="oddNumer">单号：{{item.oddNumber}}</text>
+    </view>
+    <view class="divider">
+        <van-divider />
+    </view>
+    <van-card title="{{item.title}}" thumb="{{item.curriImage}}" custom-class="detail">
+        <view slot="desc" class="descClass">
+            <text>{{item.curriId}}</text>
+            <text>{{item.curriDate}}</text>
+        </view>
+        <view slot="tags" class="tagsName">
+            <view class="mechanism">
+                <van-tag type="primary" class="tagList" color="#03c0ad">{{item.mechanism}}</van-tag>
+            </view>
+            <view class="base">
+                <van-tag type="primary" class="tagList" color="#03c0ad" wx:for="{{item.base}}" wx:for-item="baseitem"
+                    wx:key="id" wx:for-index="baseindex">
+                    {{baseitem.name}}
+                </van-tag>
+            </view>
+        </view>
+        <view slot="num" class="orderTime">
+            <view class="curriPrice">￥{{item.price}}</view>
+            <view class="curriTime">创建时间:{{item.createTime}}</view>
+        </view>
+        <view slot="bottom" class="buyerInfor">
+            <van-divider />
+            <view>
+                <text class="stuName">学生名：{{item.stuName}}</text>
+                <text class="schName">学校：{{item.schName}}</text>
+            </view>
+            <view>
+                <text class="claName">班级：{{item.className}}</text>
+                <text class="phoneNum">电话：{{item.phoneNumber}}</text>
+            </view>
+        </view>
+        <view slot="footer" class="footerButton">
+            <van-divider />
+            <van-button size="small" data-index="{{index}}" bindtap="searchListsDelete">
+                删除订单
+            </van-button>
+        </view>
+    </van-card>
+</view>

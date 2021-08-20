@@ -1,0 +1,86 @@
+<view class="perInformation">
+    <van-card custom-class="SeinforCard">
+        <view slot="thumb" class="manaimg">
+            <van-image round width="150rpx" height="150rpx" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2147844513,2013743759&fm=26&gp=0.jpg" />
+        </view>
+        <view slot="title"  class="manatitle">
+            <text>{{administratorId}}</text>
+        </view>
+        <view slot="desc"  class="manadesc">
+            <text>{{privilegeLevel}}级管理员</text>
+            <text class="sectext">{{userValue.status === 1?'启用状态':'停用状态'}}</text>
+        </view>
+    </van-card>
+</view>
+<view class="gird">
+    <van-grid column-num="3">
+        <van-grid-item icon="notes-o" text="课程管理" url="{{privilegeLevel==1||privilegeLevel==2?'/pages/curriculumManage/index':''}}" icon-color="{{privilegeLevel==1||privilegeLevel==2?'':'#a2a2a2'}}" text-class="{{privilegeLevel==1||privilegeLevel==2?'':'vanGirdItem'}}"/>
+        <van-grid-item icon="bill-o" text="订单管理" url="{{privilegeLevel==1?'/pages/orderManage/index':''}}" icon-color="{{privilegeLevel==1?'':'#a2a2a2'}}" text-class="{{privilegeLevel==1?'':'vanGirdItem'}}"/>
+        <van-grid-item icon="photo-o" text="Banner管理" url="{{privilegeLevel==1?'/pages/bannerManage/index':''}}" icon-color="{{privilegeLevel==1?'':'#a2a2a2'}}" text-class="{{privilegeLevel==1?'':'vanGirdItem'}}"/>
+        <van-grid-item icon="friends-o" text="用户管理" url="{{privilegeLevel==1?'/pages/userManage/index':''}}" icon-color="{{privilegeLevel==1?'':'#a2a2a2'}}" text-class="{{privilegeLevel==1?'':'vanGirdItem'}}"/>
+        <van-grid-item icon="wap-home-o" text="学校管理" url="{{privilegeLevel==1||privilegeLevel==3?'/pages/schoolManage/index':''}}" icon-color="{{privilegeLevel==1||privilegeLevel==3?'':'#a2a2a2'}}" text-class="{{privilegeLevel==1||privilegeLevel==3?'':'vanGirdItem'}}"/>
+        <van-grid-item icon="manager-o" text="管理员管理" url="{{privilegeLevel==1?'/pages/administrator/index':''}}" icon-color="{{privilegeLevel==1?'':'#a2a2a2'}}" text-class="{{privilegeLevel==1?'':'vanGirdItem'}}"/>
+    </van-grid>
+</view>
+<view class="mainContent">
+    <van-tabs type="card" color="#03c0ad" animated="true" tab-class="tagger">
+        <van-tab title="日报">
+            <view class="upperPart">
+                <view class="list_content" wx:for="{{paperData.day.upperLists}}" wx:key="day_upItem"
+                wx:for-item="day_upItem" wx:for-index="day_upIndex">
+                    <text class="user_list">{{day_upItem.use_describe}}</text>
+                    <text class="number">{{day_upItem.number}}</text>
+                    <text class="annotation">{{day_upItem.annotation}}%</text>
+                </view>
+                <view class="list_content"></view>
+            </view>
+            <view class="lowerPart">
+                <view class="list_content" wx:for="{{paperData.day.lowerLists}}" wx:key="day_lowItem"
+                wx:for-item="day_lowItem" wx:for-index="day_lowIndex">
+                    <text class="user_list">{{day_lowItem.use_describe}}</text>
+                    <text class="number">{{day_lowItem.number}}</text>
+                    <text class="annotation">{{day_lowItem.annotation}}%</text>
+                </view>
+            </view>
+        </van-tab>
+        <van-tab title="周报">
+        <view class="upperPart">
+                <view class="list_content" wx:for="{{paperData.week.upperLists}}" wx:key="week_upItem"
+                wx:for-item="week_upItem" wx:for-index="week_upIndex">
+                    <text class="user_list">{{week_upItem.use_describe}}</text>
+                    <text class="number">{{week_upItem.number}}</text>
+                    <text class="annotation">{{week_upItem.annotation}}%</text>
+                </view>
+                <view class="list_content"></view>
+            </view>
+            <view class="lowerPart">
+                <view class="list_content" wx:for="{{paperData.week.lowerLists}}" wx:key="week_lowItem"
+                wx:for-item="week_lowItem" wx:for-index="week_lowIndex">
+                    <text class="user_list">{{week_lowItem.use_describe}}</text>
+                    <text class="number">{{week_lowItem.number}}</text>
+                    <text class="annotation">{{week_lowItem.annotation}}%</text>
+                </view>
+            </view></van-tab>
+        <van-tab title="月报">
+        <view class="upperPart">
+                <view class="list_content" wx:for="{{paperData.month.upperLists}}" wx:key="month_upItem"
+                wx:for-item="month_upItem" wx:for-index="month_upIndex">
+                    <text class="user_list">{{month_upItem.use_describe}}</text>
+                    <text class="number">{{month_upItem.number}}</text>
+                    <text class="annotation">{{month_upItem.annotation}}%</text>
+                </view>
+                <view class="list_content"></view>
+            </view>
+            <view class="lowerPart">
+                <view class="list_content" wx:for="{{paperData.month.lowerLists}}" wx:key="month_lowItem"
+                wx:for-item="month_lowItem" wx:for-index="month_lowIndex">
+                    <text class="user_list">{{month_lowItem.use_describe}}</text>
+                    <text class="number">{{month_lowItem.number}}</text>
+                    <text class="annotation">{{month_lowItem.annotation}}%</text>
+                </view>
+            </view></van-tab>
+    </van-tabs>
+    <view class="chart">
+        <ec-canvas id="mychart" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
+</view>

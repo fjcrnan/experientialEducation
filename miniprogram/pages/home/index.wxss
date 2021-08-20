@@ -1,0 +1,206 @@
+page {
+  background-color: #f4f2f5;
+}
+.perInformation {
+  background-color: #fff;
+}
+.perInformation .SeinforCard {
+  background-color: #fff;
+}
+.perInformation .SeinforCard .manaimg {
+  margin-top: 10rpx;
+}
+.perInformation .SeinforCard .manatitle {
+  font-weight: bold;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+.perInformation .SeinforCard .manadesc {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.perInformation .SeinforCard .manadesc .sectext {
+  margin-top: 10rpx;
+}
+.gird {
+  margin-top: 15rpx;
+}
+.dataSection {
+  margin-top: 10rpx;
+  width: 100%;
+  height: 82rpx;
+  padding: 20rpx;
+  display: flex;
+  background-color: white;
+}
+.dataSection .dateBind {
+  height: 60rpx;
+  width: 275rpx;
+}
+.dataSection .dateBind .starPicker {
+  font-size: 27rpx;
+  border-radius: 10rpx;
+  height: 50rpx;
+  width: 260rpx;
+  color: #6a6a6a;
+  border: 1rpx solid #e1e4e4;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 10rpx;
+}
+.dataSection .dateBind .starPicker .icon-rili {
+  color: #c0c0bf;
+  position: absolute;
+  top: auto;
+  right: 10rpx;
+}
+.dataSection .dateBind .describe {
+  display: block;
+  text-align: center;
+}
+.dataSection .dateBind .endPicker {
+  margin-left: 20rpx;
+  font-size: 27rpx;
+  border-radius: 10rpx;
+  height: 50rpx;
+  width: 260rpx;
+  color: #6a6a6a;
+  border: 1rpx solid #e1e4e4;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 10rpx;
+}
+.dataSection .dateBind .endPicker .icon-rili {
+  color: #c0c0bf;
+  position: absolute;
+  top: auto;
+  right: 10rpx;
+}
+.threeBoxes {
+  background-color: white;
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+}
+.threeBoxes .listBox {
+  border-radius: 10rpx;
+  height: 170rpx;
+  margin: 15rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 4rpx solid #81abcc;
+  text-align: center;
+  justify-content: center;
+  font-size: 27rpx;
+}
+.threeBoxes .listBox .iconfont {
+  font-size: 30px;
+  color: #1869ce;
+}
+.mainContent {
+  margin-top: 15rpx;
+  background-color: white;
+  width: 100%;
+  height: calc( 100vh - 282rpx - 60rpx - 44rpx);
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.mainContent .upperPart {
+  margin-top: 20rpx;
+  width: 100%;
+  padding: 0 35rpx;
+  height: 120rpx;
+  display: flex;
+}
+.mainContent .upperPart .list_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.mainContent .upperPart .list_content .user_list {
+  font-size: 25rpx;
+  flex: 1;
+}
+.mainContent .upperPart .list_content .number {
+  flex: 1.6;
+  font-size: 40rpx;
+  line-height: 60rpx;
+  display: block;
+  border-right: 1px solid #dedede;
+}
+.mainContent .upperPart .list_content .annotation {
+  color: var(--ScondarytextColor);
+  flex: 1;
+  font-size: 21rpx;
+  display: block;
+  border-right: 1px solid #dedede;
+}
+.mainContent .upperPart .list_content:nth-child(2) {
+  margin-left: 30rpx;
+}
+.mainContent .upperPart .list_content:nth-child(3) {
+  margin-left: 30rpx;
+}
+.mainContent .lowerPart {
+  margin-top: 40rpx;
+  width: 100%;
+  padding: 0 35rpx;
+  height: 120rpx;
+  display: flex;
+}
+.mainContent .lowerPart .list_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.mainContent .lowerPart .list_content .user_list {
+  font-size: 25rpx;
+  flex: 1;
+}
+.mainContent .lowerPart .list_content .number {
+  flex: 1;
+  font-size: 40rpx;
+  border-right: 1px solid #dedede;
+}
+.mainContent .lowerPart .list_content .annotation {
+  color: var(--ScondarytextColor);
+  flex: 1;
+  font-size: 21rpx;
+  border-right: 1px solid #dedede;
+}
+.mainContent .lowerPart .list_content:nth-child(2) {
+  margin-left: 30rpx;
+}
+.mainContent .lowerPart .list_content:nth-child(3) {
+  margin-left: 30rpx;
+}
+.mainContent .lowerPart .list_content:nth-child(3) .number {
+  border-right: 0;
+}
+.mainContent .lowerPart .list_content:nth-child(3) .annotation {
+  border-right: 0;
+}
+.mainContent .chart {
+  width: 100%;
+  height: 35vh;
+  margin-top: 20rpx;
+}
+.mainContent .chart .container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.vanGirdItem {
+  color: #a2a2a2 !important;
+}
